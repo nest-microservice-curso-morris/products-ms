@@ -29,7 +29,7 @@ export class ProductsController {
   update(
     @Payload() updateProductDto: UpdateProductDto
   ) {
-    return this.productsService.update(updateProductDto.id, updateProductDto);
+    return this.productsService.update(updateProductDto);
   }
 
   @MessagePattern({ cmd: 'delete_product' })
